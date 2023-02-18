@@ -1,0 +1,4 @@
+1. What is PSVM?
+2. Read around the System class and the functions inside the PrintStream class
+3. What is Object class and any 5 methods of the object class
+4. 
