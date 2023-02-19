@@ -23,6 +23,18 @@ public class SingleInheritanceMain {
 		
 		System.out.println(emp);
 		System.out.println(emp1);
+		
+		Employee e1 = new FullTimeEmployee();
+		Employee e2 = new Employee();
+		FullTimeEmployee e3 = new FullTimeEmployee();
+		
+		e1.updateSalary();
+		
+		e1.display();
+		e2.display();
+		//e1.super.display();
+		
+		//FullTimeEmployee e4 = new Employee();
 
 
 	}

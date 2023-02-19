@@ -1,8 +1,8 @@
-package single;
+package multilevel;
 
-public class Employee {
+public class Employee extends Person {
 	
-	String name;
+	
 	int id;
 	String email;	
 	
@@ -16,13 +16,10 @@ public class Employee {
 		System.out.println("Name: "+name+" id:"+id+" email:"+email);
 	}
 
-	public void updateSalary() {
-		System.out.println("updateSalary called");
-	}
-
+	
 	public Employee(String name, int id, String email) {
-		super();
-		this.name = name;
+		super(name);
+		
 		this.id = id;
 		this.email = email;
 	}

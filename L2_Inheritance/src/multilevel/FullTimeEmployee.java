@@ -1,4 +1,4 @@
-package single;
+package multilevel;
 
 public class FullTimeEmployee extends Employee {
 	
