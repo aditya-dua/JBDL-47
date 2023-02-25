@@ -7,6 +7,7 @@ public class FullTimeEmployee extends Employee {
 	
 	public FullTimeEmployee(int salary, String bankAccountNumber) {
 		super();
+		
 		this.salary = salary;
 		this.bankAccountNumber = bankAccountNumber;
 		
