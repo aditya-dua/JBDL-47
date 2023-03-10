@@ -9,6 +9,9 @@ public class RegisterationMain {
 		} catch (InvalidAgeException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}catch(Exception e) {
+			System.err.println("In Exception Catch");
+			e.printStackTrace();
 		}
 	}
 }

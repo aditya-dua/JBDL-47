@@ -1,0 +1,24 @@
+Question1: Can a class have more than 1 contructor? Yes, Constructor Overloading
+Question2: Can we have super() and this() inside a constructor?
+
+class Employee{
+
+Employee(){
+super();
+this();
+}
+
+}
+Question3: What is the return type of a constructor? Cannot return anything...not even void
+Question4: Overloading and overriding?
+Question5: How can you call a functions defined in parent class?
+Question6: Can we overload the main method?
+Question7: Name any 5 methods in object class?
+hashcode
+toString
+finalize
+clone
+equals
+Question8: What is the difference between static function and static block?
+Question9: 
+

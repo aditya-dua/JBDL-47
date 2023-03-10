@@ -5,12 +5,16 @@ public class Employee extends Person {
 	
 	int id;
 	String email;	
+	static {
+		System.out.println("Hello Static Block!");
+	}
 	
 	public Employee() {
 		System.out.println("Employee Default Constructor");
 		// TODO Auto-generated constructor stub
 	}
 
+	
 	public void display() {
 		System.out.println("Display from Employee");
 		System.out.println("Name: "+name+" id:"+id+" email:"+email);
