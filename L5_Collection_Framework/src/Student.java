@@ -20,6 +20,15 @@ public class Student {
 		return "Student [id=" + id + ", name=" + name + ", marks=" + Arrays.toString(marks) + "]";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		
+		Student s=(Student) obj;
+		if(this.id==s.id) {return true;}
+		else {return false;}
+		
+	}
 	
 	
 }
