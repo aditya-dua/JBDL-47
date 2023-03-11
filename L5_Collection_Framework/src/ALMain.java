@@ -30,8 +30,7 @@ public class ALMain {
 		for (int i = 0; i < alint.size(); i++) {
 			System.out.println(alint.get(i));
 		}
-		
-		
+				
 		alint.remove(1);
 		alint.remove((Integer)5);
 

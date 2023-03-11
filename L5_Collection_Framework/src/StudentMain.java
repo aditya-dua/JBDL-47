@@ -15,6 +15,7 @@ public class StudentMain {
 		for (Student student : al) {
 			System.out.println(student);
 		}
+		
 
 	}
 
