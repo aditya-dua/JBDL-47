@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class HMMain {
 
@@ -28,10 +29,12 @@ public class HMMain {
 		Student s = new Student(1, "ABC", marks);
 		studentHM.put(s.id, s);
 		
+		
 		Student s1 = new Student(1, "ABC", marks);
 		studentHM.put(s.id, s1);
 		
 		studentHM.get(1);
+		HashMap<Student, Student> studentHM1 = new HashMap<>();
 
 		HashMap<String, Object> sampleSet = new HashMap<>();
 		
@@ -50,8 +53,24 @@ public class HMMain {
 		hashSet.add("Vishal");
 		hashSet.add("Vikram");
 		hashSet.add("Aditya");
+		
+		HashSet<Student> studentHS = new HashSet<>();
 
+		studentHS.add(s);
+		studentHS.add(s1);
+		
+		for (Iterator iterator = studentHS.iterator(); iterator.hasNext();) {
+			Student student = (Student) iterator.next();
+			System.out.println(student);
+		}
+		
+		
 
+		// Contract b/w HashCode and equals
+		/*
+		 * If two objects are equal, they will have the same hashcode...but if
+		 * two object have the same hashcode, they may or may not be equal
+		 */
 		
 	
 	}

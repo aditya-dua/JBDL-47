@@ -23,7 +23,6 @@ public class Student {
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
-		
 		Student s=(Student) obj;
 		if(this.id==s.id) {return true;}
 		else {return false;}
