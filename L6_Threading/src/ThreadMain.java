@@ -9,11 +9,12 @@ public class ThreadMain {
 		
 		IntThread t2= new IntThread();
 		t2.start();
+		System.out.println(t1.getName());
 		
 		for(int i =0;i<10;i++) {
 			System.out.println("Main Thread :"+i);
 			try {
-				Thread.sleep(400);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
