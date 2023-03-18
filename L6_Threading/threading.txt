@@ -15,7 +15,7 @@ How multithreading is very important during development. Please explain the appl
 sorry my bad, I got skipped can you explain the need of passing the runnable thread and passing it throw thread constructor cant we just use it like r.start();
 
 ok so these are asynchronous but if we wanna make dsure of order we have to make itr synchronous
-like things and mail and sms no need both to check but in cases where we need specific order ? Inter Thread Communication
+like things and mail and sms no nebded both to check but in cases where we need specific order ? Inter Thread Communication
 
 
 T1 -> R1, R2
