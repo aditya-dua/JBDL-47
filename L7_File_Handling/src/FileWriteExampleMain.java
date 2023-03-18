@@ -14,6 +14,7 @@ public class FileWriteExampleMain {
 			File f = new File("myFirstFile.txt");
 			FileWriter fileWriter;
 			
+			// You have to create the file over here
 			fileWriter = new FileWriter(f);
 			fileWriter.write("Its my First Text File");
 			
