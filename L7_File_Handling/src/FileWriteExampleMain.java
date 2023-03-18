@@ -6,10 +6,6 @@ public class FileWriteExampleMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		
-		
-
 		try {
 			File f = new File("myFirstFile.txt");
 			FileWriter fileWriter;

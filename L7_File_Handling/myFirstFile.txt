@@ -1,2 +1,1 @@
-Its my First Text File.
-I am aditya Dua, mentor for JBDL-47.
+Its my First Text File
