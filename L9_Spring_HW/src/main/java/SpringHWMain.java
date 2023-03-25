@@ -10,7 +10,7 @@ public class SpringHWMain {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
 	
 		HelloWorld hw = (HelloWorld)context.getBean("helloWorld");
-		hw.setMessage("Test Message");
+		//hw.setMessage("Test Message");
 	
 		hw.print();
 		
