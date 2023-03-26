@@ -18,6 +18,20 @@ public class SpringHWMain {
 		
 		HelloWorld hw1 = (HelloWorld)context.getBean("helloWorld");
 		System.out.println(hw1);
+		
+		HelloWorld hw2 = (HelloWorld)context.getBean("myTestMessage");
+		hw2.print();
 	}
+	
+	/**
+	 * Scope of Bean:
+	 * Default : Singleton DB
+	 * single instance per IoC Container
+	 * protptype: any number  : POJO
+	 * request: Request Model
+	 * session: Session Related
+	 * global-session: entire web session on the application context : Application Related Master
+	 * 
+	 */
 
 }
