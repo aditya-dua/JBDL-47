@@ -16,7 +16,18 @@
 		<constructor-arg index="1" value = "Employee Name -1"></constructor-arg>
 		<constructor-arg index="2" ref="address"></constructor-arg>
 	
-		
+	</bean>
+	
+	<bean id="student" class="Student" scope = "prototype">
+	
+		<property name="marks">
+			<set>
+				<value>80</value>
+				<value>70</value>
+				<value>60</value>
+				<value>50</value>
+			</set>
+		</property>
 	
 	</bean>
 	
