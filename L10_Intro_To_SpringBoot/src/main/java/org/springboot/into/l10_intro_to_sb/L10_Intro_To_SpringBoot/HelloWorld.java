@@ -1,6 +1,8 @@
 package org.springboot.into.l10_intro_to_sb.L10_Intro_To_SpringBoot;
 
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,5 +27,11 @@ public class HelloWorld {
 	@RequestMapping("/message")
 	public String messageParam(@RequestParam String name) {
 		return "Hello "+name;
+	}
+	
+	@PostMapping("/post")
+	public Student createStudent(@RequestBody Student student) {
+		
+		return student;
 	}
 }
