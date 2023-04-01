@@ -9,6 +9,7 @@ public class SpringMainDI2 {
 		
 		Employee emp = (Employee) context.getBean("employee");
 		
+		
 		System.out.println(emp);
 		
 		Student stu = (Student) context.getBean("student");

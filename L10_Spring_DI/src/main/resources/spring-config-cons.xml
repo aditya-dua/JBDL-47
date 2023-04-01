@@ -11,7 +11,7 @@
 	<property name="pinCode" value="110001" ></property>
 	</bean>
 	
-	<bean id="employee" class="Employee" scope = "prototype">
+	<bean id="employee" class="Employee" scope = "singleton">
 		<constructor-arg index="0" value = "1"></constructor-arg>
 		<constructor-arg index="1" value = "Employee Name -1"></constructor-arg>
 		<constructor-arg index="2" ref="address"></constructor-arg>
