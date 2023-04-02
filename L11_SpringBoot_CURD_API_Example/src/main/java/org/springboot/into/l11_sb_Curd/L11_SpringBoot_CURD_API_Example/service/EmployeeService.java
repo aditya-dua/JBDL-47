@@ -6,7 +6,10 @@ import java.util.HashMap;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.entity.Employee;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeRequestModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeResponseModel;
+import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.DeleteEmployeeResponseModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.GetAllEmployeesResponseModel;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 public class EmployeeService {
@@ -80,6 +83,21 @@ public class EmployeeService {
 		
 		return response;	
 		
+	}
+	
+	
+	public DeleteEmployeeResponseModel deleteEmployeeById(int id) {
+		
+		DeleteEmployeeResponseModel response;
+		
+		if(employeeHM.isEmpty()) {
+			response = new DeleteEmployeeResponseModel(303, "No Employees availablae.");
+		}else if(!employeeHM.containsKey(id)){
+			response = new DeleteEmployeeResponseModel(304, "ID Doesnot Exsists");
+		}else {
+			response = new DeleteEmployeeResponseModel(200, "Delete Success");
+		}
+		return response;
 	}
 
 }

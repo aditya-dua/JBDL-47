@@ -3,8 +3,10 @@ package org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.controll
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.entity.Employee;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeRequestModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeResponseModel;
+import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.DeleteEmployeeResponseModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.GetAllEmployeesResponseModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.service.EmployeeService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,4 +45,10 @@ public class EmployeeController {
 	public GetAllEmployeesResponseModel getAllEmployees(@PathVariable int id) {
 		return empService.getAllEmployees();
 	}
+	
+	@DeleteMapping("delete/{id}")
+	public DeleteEmployeeResponseModel deleteEmployeeById(@PathVariable int id) {
+		return empService.deleteEmployeeById(id);
+	}
+	
 }
