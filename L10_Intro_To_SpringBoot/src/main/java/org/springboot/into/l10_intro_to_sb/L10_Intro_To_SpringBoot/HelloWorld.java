@@ -34,4 +34,18 @@ public class HelloWorld {
 		
 		return student;
 	}
+	
+	@RequestMapping("/dummy/{id}")
+	public String dummyAPI(@PathVariable int id, @RequestParam String username ){
+		
+		if(username==null) {
+			return "Hello Guest "+id+" ,";
+		}else {
+			
+			return "Hello" +username+" "+id;
+		}
+		
+		
+		
+	}
 }
