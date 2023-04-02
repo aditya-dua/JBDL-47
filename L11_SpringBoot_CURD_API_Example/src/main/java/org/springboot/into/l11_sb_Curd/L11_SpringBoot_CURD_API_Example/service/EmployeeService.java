@@ -1,10 +1,13 @@
 package org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.entity.Employee;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeRequestModel;
 import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.CreateEmployeeResponseModel;
+import org.springboot.into.l11_sb_Curd.L11_SpringBoot_CURD_API_Example.model.GetAllEmployeesResponseModel;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 public class EmployeeService {
 	
@@ -36,6 +39,46 @@ public class EmployeeService {
 		}
 		
 		return response;
+		
+	}
+	
+	
+	public GetAllEmployeesResponseModel load() {
+		
+		Employee emp = new Employee(1, "Aditya", 1000, "a@a.com");
+		
+		employeeHM.put(emp.getId(), emp);
+		
+		emp = new Employee(2, "David", 1000, "a@a.com");
+		
+		employeeHM.put(emp.getId(), emp);
+		
+		emp = new Employee(3, "John", 1000, "a@a.com");
+		
+		employeeHM.put(emp.getId(), emp);
+		
+		emp = new Employee(4, "John", 1000, "a@a.com");
+		
+		employeeHM.put(emp.getId(), emp);
+		
+		return getAllEmployees();
+	}
+	
+	public GetAllEmployeesResponseModel getAllEmployees() {
+		
+		ArrayList<Employee> empList = new ArrayList<>();
+		GetAllEmployeesResponseModel response;
+		
+		if(employeeHM.isEmpty()) {
+			response = new GetAllEmployeesResponseModel(303, "No Employees availablae.");
+		}else {
+			for(int key: employeeHM.keySet()) {
+				empList.add(employeeHM.get(key));
+			}
+			response = new GetAllEmployeesResponseModel(200, "Employee List Fetched", empList);
+		}
+		
+		return response;	
 		
 	}
 
