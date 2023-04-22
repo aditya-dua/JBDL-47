@@ -6,14 +6,14 @@ import java.sql.Statement;
 
 public class MySQLConnectionPS {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
-
+		Connection con = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jbdl47","root","password");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jbdl47","root","password");
 			
 			System.out.println("Database Connection Successful!");
 			
@@ -23,6 +23,8 @@ public class MySQLConnectionPS {
 //			stmt.execute(query);
 //			System.out.println("DB is Created");
 			
+			con.setAutoCommit(false);
+			
 			PreparedStatement ps = con.prepareStatement("insert into student values(?,?,?,?)");
 			
 			ps.setInt(1, 1);
@@ -31,6 +33,9 @@ public class MySQLConnectionPS {
 			ps.setInt(4, 1);
 			
 			ps.execute();
+			
+			con.commit();
+			
 			ps.close();
 			
 			
@@ -39,9 +44,12 @@ public class MySQLConnectionPS {
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			
+			con.rollback();
 			e.printStackTrace();
 		}
 		
