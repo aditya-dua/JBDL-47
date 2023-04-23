@@ -12,7 +12,10 @@
 			<generator class="native"></generator>
 		</id>
 		<property name="name" type = "string" column="name"></property>
+		
 	
 	</class>
+	
+	
 	
 </hibernate-mapping>

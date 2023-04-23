@@ -21,9 +21,9 @@
 		3. update 
 		4. create-drop
 		 -->
+		<mapping class="org.gfg.L17_Hibernate_Intro.Student"></mapping>
 		
-		<mapping resource ="employee.hbm.xml"></mapping>
-		<mapping resource ="student.hbm.xml"></mapping>
+		
 	</session-factory>
 
 </hibernate-configuration>
