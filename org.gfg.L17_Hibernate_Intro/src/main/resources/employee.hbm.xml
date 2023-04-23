@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+ 
+<hibernate-mapping>
+
+	<class name = "org.gfg.L17_Hibernate_Intro.Employee" table = "jbdl47_employee">
+	
+		<meta attribute="desc">Employee Class</meta>
+		<id name = "id" type ="int" column = "id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" type = "string" column="name"></property>
+	
+	</class>
+	
+</hibernate-mapping>
