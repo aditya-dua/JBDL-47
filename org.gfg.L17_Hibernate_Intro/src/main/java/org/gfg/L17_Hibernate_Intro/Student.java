@@ -12,6 +12,7 @@ import jakarta.persistence.Table;
 
 public class Student {
 	
+	// STU000001
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
