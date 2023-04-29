@@ -14,11 +14,11 @@
 		<property name = "connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		
 		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create-drop</property>
 		
 		
-		
-		<mapping class ="l18_hibernate_mapping.one2one.Employee"></mapping>
-		<mapping class ="l18_hibernate_mapping.one2one.Address"></mapping>
+		<mapping class ="l18_hibernate_mapping.one2many.Employee"></mapping>
+		<mapping class ="l18_hibernate_mapping.one2many.Address"></mapping>
 	</session-factory>
 
 </hibernate-configuration>

@@ -1,4 +1,6 @@
-package l18_hibernate_mapping.one2one;
+package l18_hibernate_mapping.one2many;
+
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -7,11 +9,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "jbdl-47-mapping-O2O-employee")
+@Table(name = "jbdl-47-mapping-O2M-employee")
 public class Employee {
 	
 	@Id
@@ -25,10 +28,9 @@ public class Employee {
 	@Column(name="lastName")
 	private String lastName;
 	
+	@OneToMany(mappedBy = "id")
+	private Set<Address> address;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "address")
-	private Address address;
 	
 	
 	public Employee() {
@@ -59,19 +61,11 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
-	public Address getAddress() {
+	public Set<Address> getAddress() {
 		return address;
 	}
 
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
-	public Employee(int id, String firstName, String lastName, Address address) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public void setAddress(Set<Address> address) {
 		this.address = address;
 	}
 
@@ -80,6 +74,18 @@ public class Employee {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address=" + address
 				+ "]";
 	}
+
+	public Employee(int id, String firstName, String lastName, Set<Address> address) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+
+	
+
+	
 	
 	
 	
