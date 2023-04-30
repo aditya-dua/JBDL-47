@@ -26,8 +26,8 @@ public class O2MMappingMainExample {
 		addSet.add(add2);
 		
 		
-		Employee emp = new Employee(1, "Aditya", "Dua", addSet);
-		
+		Employee emp = new Employee(1, "Aditya", "Dua");
+		emp.setAddress(addSet);
 		Session session = factory.openSession();
 		
 		Transaction tx;
