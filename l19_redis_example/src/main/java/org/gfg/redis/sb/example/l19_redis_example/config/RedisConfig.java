@@ -18,7 +18,6 @@ public class RedisConfig {
 		config.setPort(6379);
 		
 		return new JedisConnectionFactory(config);
-
 	}
 	
 	
