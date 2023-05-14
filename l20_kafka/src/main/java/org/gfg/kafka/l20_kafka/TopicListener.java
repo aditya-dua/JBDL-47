@@ -16,9 +16,6 @@ public class TopicListener {
 		System.out.println("Topic Name = "+payload.topic());
 		System.out.println("Key "+payload.key());
 		System.out.println("Value "+payload.value());
-		System.out.println("Entire Payload"+payload.toString());
-
+		System.out.println("Entire Payload"+payload.toString());	
 	}
-	
-	
 }
